@@ -162,4 +162,96 @@ signupForm.addEventListener('submit', async (e) => {
             signupForm.reset();
             
             // Switch to login after a delay
-            setTimeout(() =>
+            setTimeout(() => {
+                signupModal.style.display = 'none';
+                loginModal.style.display = 'block';
+            }, 2000);
+        } else {
+            signupError.textContent = data.message || 'Registration failed';
+        }
+    } catch (error) {
+        console.error('Signup error:', error);
+        signupError.textContent = 'Registration failed. Please try again.';
+    }
+});
+
+// Account form submission
+accountForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    accountError.textContent = '';
+    accountSuccess.textContent = '';
+    
+    const accountType = accountTypeInput.value;
+    const initialDeposit = document.getElementById('initialDeposit').value;
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+        accountError.textContent = 'Please login to open an account';
+        setTimeout(() => {
+            accountModal.style.display = 'none';
+            loginModal.style.display = 'block';
+        }, 1500);
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${API_BASE_URL}/accounts`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ type: accountType, balance: initialDeposit })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            accountSuccess.textContent = `Your ${accountType} account has been created successfully!`;
+            accountForm.reset();
+            
+            // Close modal after a delay
+            setTimeout(() => {
+                accountModal.style.display = 'none';
+            }, 2000);
+        } else {
+            accountError.textContent = data.message || 'Account creation failed';
+        }
+    } catch (error) {
+        console.error('Account creation error:', error);
+        accountError.textContent = 'Account creation failed. Please try again.';
+    }
+});
+
+// Open account modal with selected account type
+function openAccountModal(accountType) {
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+        // User not logged in, redirect to login
+        accountModal.style.display = 'none';
+        loginModal.style.display = 'block';
+        return;
+    }
+    
+    // Set account type in the form
+    accountTypeInput.value = accountType;
+    accountModalTitle.textContent = `Open ${capitalizeFirstLetter(accountType)} Account`;
+    accountModal.style.display = 'block';
+}
+
+// Helper function to capitalize first letter
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Logout function
+function logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    checkAuthStatus();
+    userDropdown.style.display = 'none';
+}
+
+// Initialize page
+checkAuthStatus();
