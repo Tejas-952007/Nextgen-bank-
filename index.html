@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Bank - The Future of Banking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="bank-name">NextGen</span>Bank
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Accounts</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Cards</a></li>
+                <li><a href="#">Loans</a></li>
+                <li><a href="#">Investments</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn" id="openLogin">Login</button>
+                <button class="signup-btn" id="openSignup">Sign Up</button>
+            </div>
+            <div class="user-menu" id="userMenu">
+                <div class="user-avatar" id="userAvatar">JD</div>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="#">My Profile</a>
+                    <a href="#">Accounts</a>
+                    <a href="#">Transactions</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Banking for the <span>Next Generation</span></h1>
+                <p>Experience seamless digital banking with cutting-edge technology and personalized services.</p>
+                <div class="cta-buttons">
+                    <button class="primary-btn" id="heroOpenAccount">Open Account</button>
+                    <button class="secondary-btn">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Digital Banking">
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose NextGen Bank?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Instant Transfers</h3>
+                    <p>Send and receive money instantly, 24/7 with zero delays.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Advanced Security</h3>
+                    <p>Military-grade encryption and biometric authentication.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-percentage"></i>
+                    <h3>Competitive Rates</h3>
+                    <p>Higher interest rates on savings and lower loan rates.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Assistance</h3>
+                    <p>Smart financial insights powered by artificial intelligence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="accounts">
+            <h2>Account Options</h2>
+            <div class="account-cards">
+                <div class="account-card">
+                    <h3>Basic Account</h3>
+                    <p class="account-desc">Perfect for everyday banking</p>
+                    <ul>
+                        <li>No monthly fees</li>
+                        <li>Free debit card</li>
+                        <li>Mobile banking</li>
+                    </ul>
+                    <button class="account-btn" data-account-type="basic">Open Account</button>
+                </div>
+                <div class="account-card premium">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Premium Account</h3>
+                    <p class="account-desc">Enhanced benefits package</p>
+                    <ul>
+                        <li>Higher interest rates</li>
+                        <li>Priority customer service</li>
+                        <li>Travel insurance</li>
+                        <li>Investment options</li>
+                    </ul>
+                    <button class="account-btn" data-account-type="premium">Open Account</button>
+                </div>
+                <div class="account-card business">
+                    <h3>Business Account</h3>
+                    <p class="account-desc">For entrepreneurs</p>
+                    <ul>
+                        <li>Multi-user access</li>
+                        <li>Expense management</li>
+                        <li>Merchant services</li>
+                        <li>Business loans</li>
+                    </ul>
+                    <button class="account-btn" data-account-type="business">Open Account</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mobile-app">
+            <div class="app-content">
+                <h2>NextGen Mobile Banking</h2>
+                <p>Bank anytime, anywhere with our award-winning mobile app.</p>
+                <ul class="app-features">
+                    <li><i class="fas fa-check"></i> Mobile check deposit</li>
+                    <li><i class="fas fa-check"></i> Bill payments</li>
+                    <li><i class="fas fa-check"></i> Budget tracking</li>
+                    <li><i class="fas fa-check"></i> Instant notifications</li>
+                </ul>
+                <div class="app-download">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" alt="App Store">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Play">
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile Banking App">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="bank-name">NextGen</span>Bank
+                <p>The future of banking is here</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="#">Loans</a></li>
+                        <li><a href="#">Investments</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 NextGen Bank. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeLogin">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="form-submit">Login</button>
+                <div class="form-footer">
+                    <p>Don't have an account? <a id="switchToSignup">Sign Up</a></p>
+                </div>
+                <div class="error-message" id="loginError"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeSignup">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="form-submit">Create Account</button>
+                <div class="form-footer">
+                    <p>Already have an account? <a id="switchToLogin">Login</a></p>
+                </div>
+                <div class="error-message" id="signupError"></div>
+                <div class="success-message" id="signupSuccess"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Account Creation Modal -->
+    <div class="modal" id="accountModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeAccount">&times;</span>
+            <h2 id="accountModalTitle">Open New Account</h2>
+            <form id="accountForm">
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <input type="text" id="accountType" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="initialDeposit">Initial Deposit ($)</label>
+                    <input type="number" id="initialDeposit" min="0" required>
+                </div>
+                <button type="submit" class="form-submit">Open Account</button>
+                <div class="error-message" id="accountError"></div>
+                <div class="success-message" id="accountSuccess"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
