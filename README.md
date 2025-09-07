@@ -40,6 +40,13 @@ This project includes features like instant transfers, advanced security, AI-pow
 ## 🎥 Demo Video
 Watch the demo here:  
 👉 [Demo Video](./assets/demovideo.mp4)
+<section id="demo" class="demo-section">
+  <h2>🎥 Project Demo</h2>
+  <video width="100%" height="auto" controls poster="thumbnail.jpg">
+    <source src="demovideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
 
 ---
 
